@@ -1,12 +1,16 @@
-// /dev/sda1: the boot partition on the SSD.
-// /dev/sda2: the principal partition on the SSD.
+```
+/dev/sda1: the boot partition on the SSD.
+/dev/sda2: the principal partition on the SSD.
 
-// let’s mount them on /mnt/boot (the boot partition) and /mnt/principal (the principal partition)
+let’s mount them on /mnt/boot (the boot partition) and /mnt/principal (the principal partition)
+
 sudo mkdir /mnt/boot && sudo mount /dev/sda1 /mnt/boot
 sudo mkdir /mnt/principal && sudo mount /dev/sda2 /mnt/principal
+```
 
 
-// create file name BootFix.sh 
+
+Create file name BootFix.sh 
 
 
 ```
@@ -267,11 +271,12 @@ sudo chmod +x "$mntWritable/etc/apt/apt.conf.d/999_decompress_rpi_kernel"
 echo "Updating Ubuntu partition was successful!  Shut down your Pi, remove the SD card then reconnect the power."
 ```
 
-
+```
 run chmod +x BootFix.sh
-
+```
+```
 run sudo ./BootFix.sh
-
+```
 Credits:
 - https://medium.com/@zsmahi/make-ubuntu-server-20-04-boot-from-an-ssd-on-raspberry-pi-4-33f15c66acd4
 - https://www.howtoraspberry.com/2021/06/how-to-boot-from-usb-for-ubuntu-20-04/
